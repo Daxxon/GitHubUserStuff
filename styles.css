@@ -7,17 +7,41 @@ h1 {
   background-color: black;
   text-align: center;
   font-weight: 100;
-  font-size: 2em;
+  font-size: 4em;
   padding: 20px 0px;
+  margin: 0;
 }
 
-h3 {
+h2 {
   color: black;
-  text-align: center;
   padding: 20px 0px;
+  font-size: 2em;
 }
 
 body {
+  background-color: black;
+  padding: 0 50px;
+}
+
+p {
+  color: grey;
+  font-family: sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#infoBox {
   display: flex;
   flex-flow: row wrap;
+  background-color: white;
+}
+
+#theBasics {
+  width: 300px;
+  margin-left: 50px;
+  padding: 0 0 50px 0;
+}
+
+#theStory {
+  width: 300px;
 }
