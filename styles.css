@@ -1,0 +1,23 @@
+header {
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-weight: 100;
+  font-size: 2em;
+  padding: 20px 0px;
+}
+
+h3 {
+  color: black;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+body {
+  display: flex;
+  flex-flow: row wrap;
+}
