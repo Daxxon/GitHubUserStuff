@@ -1,10 +1,10 @@
 header {
-  background-color: black;
+  background-color: #222;
 }
 
 h1 {
   color: white;
-  background-color: black;
+  /*background-color: black;*/
   text-align: center;
   font-weight: 100;
   font-size: 4em;
@@ -16,24 +16,42 @@ h2 {
   color: black;
   padding: 20px 0px;
   font-size: 2em;
+  margin-bottom: 0;
 }
 
 body {
   background-color: black;
-  padding: 0 50px;
+  padding: 100px 100px;
 }
 
 p {
+  font-size: 0.85em;
   color: grey;
   font-family: sans-serif;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #infoBox {
   display: flex;
   flex-flow: row wrap;
-  background-color: white;
+  background-color: #E6DEDC;
+}
+
+#ssshhhhhh {
+  color: #E6DEDC;
+  background-color: #E6DEDC;
+}
+
+#theStory p {
+  border-width: 0 0 0 2px;
+  border-style: dotted;
+  border-color: grey;
+  padding-left: 20px;
+}
+
+#theStory h2 {
+  padding-left: 20px;
 }
 
 #theBasics {
@@ -44,4 +62,14 @@ p {
 
 #theStory {
   width: 300px;
+}
+
+#userIcon {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+#userIconContainer {
+  padding: 30px 0 0 100px;
 }

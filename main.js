@@ -12,14 +12,15 @@ let basicsP4 = '';
 let basicsP5 = '';
 let theStory = '';
 let storyP = '';
-let userIcon = '';
+let userIconURL = '';
 let name = '';
 let username = '';
 let gitHubUrl = '';
 let emailAddress = '';
 let company = '';
 let website = '';
-
+let bio = '';
+let secretMessage = '';
 
 function renderPageElements() {
   myBody = document.querySelector('body');
@@ -51,10 +52,16 @@ function renderPageElements() {
   headerH2Story = document.createElement('h2');
   theStory.appendChild(headerH2Story);
   storyP = document.createElement('p');
-  theBasics.appendChild(storyP);
-  userIcon = document.createElement('div');
+  theStory.appendChild(storyP);
+  userIconContainer = document.createElement('div');
+  userIconContainer.id = 'userIconContainer';
+  myContainer.appendChild(userIconContainer);
+  userIcon = document.createElement('img');
   userIcon.id = 'userIcon';
-  myContainer.appendChild(userIcon);
+  userIconContainer.appendChild(userIcon);
+  secretMessage = document.createElement('h1');
+  secretMessage.id = 'ssshhhhhh';
+  myBody.appendChild(secretMessage);
 }
 
 function requestUserData() {
@@ -73,6 +80,8 @@ function populateData() {
   emailAddress = userData.email;
   company = userData.company;
   website = userData.blog;
+  bio = userData.bio + userData.bio;
+  userIconURL = userData.avatar_url;
   populatePage(userData);
 }
 
@@ -81,10 +90,13 @@ function populatePage(userData) {
   headerH2Basics.innerHTML = "The Basics";
   headerH2Story.innerHTML = "The Story";
   basicsP1.innerHTML = `Name: ${name}`;
-  basicsP2.innerHTML = `Github URL: <a href="${gitHubUrl}">${userName}</a>`
+  basicsP2.innerHTML = `Github URL: <a href="${gitHubUrl}">${userName}</a>`;
   basicsP3.innerHTML = `Email: ${emailAddress}`;
-  basicsP4.innerHTML = `Company: ${company}`
-  basicsP5.innerHTML = `Website: ${website}`
+  basicsP4.innerHTML = `Company: ${company}`;
+  basicsP5.innerHTML = `Website: <a href="${website}">${website}</a>`;
+  storyP.innerHTML = bio;
+  userIcon.src = `${userIconURL}`;
+  secretMessage.innerHTML = "SSHH... This is a secret message";
 }
 
 renderPageElements();
